@@ -31,7 +31,7 @@ COPY --from=builder /usr/lib/libasterisk* /usr/lib/
 COPY --from=builder /run/asterisk/ /run/asterisk/
 COPY --from=builder /var/lib/asterisk/ /var/lib/asterisk/
 COPY --from=builder /var/spool/asterisk/ /var/spool/asterisk/
-COPY --from=builder /var/cache/asterisk/ /var/cache/asterisk/
+# COPY --from=builder /var/cache/asterisk/ /var/cache/asterisk/
 COPY --from=builder /var/log/asterisk /var/log/asterisk
 
 CMD ["/usr/sbin/asterisk", "-c", "-vvvv", "-g"]
